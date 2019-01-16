@@ -1,14 +1,15 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import CountryShortInfo from './countryShortInfo';
 
-export default (props) => {
+const CountryList = (props) => (
 
-  return (
-    <Fragment>
-      {props.data.map(shortCountryInfo => {
-        return <CountryShortInfo data={shortCountryInfo}/>
-      })}
-    </Fragment>
-  )
+  <div className="country_list">
+    {props.data.map(shortCountryInfo => (
+      <CountryShortInfo key={shortCountryInfo.alpha3Code}
+                        data={shortCountryInfo}/>
+    ))}
+  </div>
 
-}
+);
+
+export default CountryList;

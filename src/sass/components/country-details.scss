@@ -1,0 +1,33 @@
+.country_details {
+  display: flex;
+
+  &_info {
+    flex-basis: 60%;
+
+    div {
+      padding-bottom: 10px;
+    }
+
+  }
+
+  //&__title {
+  //  font-size: 32px;
+  //}
+
+  &__map {
+    width: 100%;
+    height: 300px;
+    background: #ccc;
+    margin-top: 20px;
+  }
+
+  &__flag {
+    flex-basis: 40%;
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+}
