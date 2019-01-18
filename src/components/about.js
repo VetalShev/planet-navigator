@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import LayoutDefault from "../containers/layoutDefault";
+import LayoutDefault from "./layoutDefault";
 
 class About extends Component {
   render() {

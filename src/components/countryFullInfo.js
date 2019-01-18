@@ -1,39 +1,11 @@
 import React, {Fragment} from 'react';
-import LayoutDefault from '../containers/layoutDefault';
+import LayoutDefault from './layoutDefault';
 import '../sass/components/country-details.scss';
 
 class CountryFullInfo extends React.Component {
 
-  state = {
-    country: null,
-    loading: true
-  };
-
-  componentDidMount() {
-    const {countryCode} = this.props.match.params;
-
-    fetch(`https://restcountries.eu/rest/v2/alpha/${countryCode}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(response.statusText || 'Some exception');
-        }
-        return response.json();
-      })
-      .then(country => {
-        this.setState({
-          country: country
-        })
-      })
-      .catch(console.error)
-      .then(() => {
-        this.setState({
-          loading: false
-        });
-      })
-  }
-
   render() {
-    const {country, loading} = this.state;
+    const {country, loading} = this.props;
 
     return (
       <LayoutDefault match={this.props.match}>
