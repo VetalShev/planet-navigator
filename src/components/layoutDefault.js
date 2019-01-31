@@ -1,6 +1,6 @@
 import React from 'react';
 import {Layout, Menu, Breadcrumb} from 'antd';
-import {Link} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 import 'antd/dist/antd.css';
 import '../sass/components/layout.scss';
 import '../sass/components/main_menu.scss';
@@ -38,6 +38,9 @@ class LayoutDefault extends React.Component {
             <Menu.Item key="/">
               <Link to="/">Home</Link>
             </Menu.Item>
+            <Menu.Item key="/suggestions">
+              <Link to="/suggestions">Suggestion Box</Link>
+            </Menu.Item>
             <Menu.Item key="/about">
               <Link to="/about">About</Link>
             </Menu.Item>
@@ -69,4 +72,4 @@ class LayoutDefault extends React.Component {
   }
 }
 
-export default LayoutDefault;
+export default withRouter(LayoutDefault);

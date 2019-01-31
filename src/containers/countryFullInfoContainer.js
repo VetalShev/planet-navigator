@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {fetchCountryById} from '../actions/actions';
 import CountryFullInfo from '../components/countryFullInfo';
 
-class ConnectedCountryFullInfo extends React.Component {
+class CountryFullInfoContainer extends React.Component {
 
   componentDidMount() {
     const {countryCode} = this.props.match.params;
@@ -34,6 +34,4 @@ const mapStateToProps = state => {
   };
 };
 
-const CountryFullInfoContainer = connect(mapStateToProps, mapDispatchToProps)(ConnectedCountryFullInfo);
-
-export default CountryFullInfoContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(CountryFullInfoContainer);

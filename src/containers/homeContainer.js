@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {fetchAllCountries} from '../actions/actions';
 import Home from '../components/home';
 
-class ConnectedHome extends React.Component {
+class HomeContainer extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllCountries();
@@ -29,6 +29,7 @@ const mapStateToProps = state => {
   };
 };
 
-const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(ConnectedHome);
-
-export default HomeContainer;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomeContainer);

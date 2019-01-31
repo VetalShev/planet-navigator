@@ -10,4 +10,10 @@ const CountryShortInfo = props => (
   </div>
 );
 
+// table with the next columns:
+// - population
+// - region
+// - sub region
+// - language
+
 export default CountryShortInfo;

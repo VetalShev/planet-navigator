@@ -5,7 +5,7 @@ export let fetchAllCountries = () => {
 
     dispatch(fetchAllCountriesRequest());
 
-    fetch('https://restcountries.eu/rest/v2/all')
+    return fetch('https://restcountries.eu/rest/v2/all')
       .then(response => {
         if (!response.ok) {
           throw new Error(response.statusText || 'Some exception');

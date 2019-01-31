@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Switch} from 'react-router-dom';
 import Home from '../containers/homeContainer';
-import About from './about';
+import About from '../containers/aboutContainer';
 import CountryFullInfo from '../containers/countryFullInfoContainer';
 
 const App = () => (
